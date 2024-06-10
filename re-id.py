@@ -1,6 +1,4 @@
 """ This script is re-id script that uses the SAM model to extract embeddings from images and then visualize them using t-SNE"""
-
-
 import os
 import cv2
 from PIL import Image
@@ -28,6 +26,7 @@ import umap
 # This class is used to load the SAM model and extract image embeddings
 # The class also has methods to export the model to ONNX format, quantize the model and load the model in onnxruntime 
 # Refer : https://colab.research.google.com/github/facebookresearch/segment-anything/blob/main/notebooks/onnx_model_example.ipynb
+
 class SAM():
     def __init__(self, checkpoint='sam_vit_h_4b8939.pth', model_type='vit_h'):
         self.sam  = sam_model_registry[model_type](checkpoint = checkpoint)
