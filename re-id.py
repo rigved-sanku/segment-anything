@@ -148,6 +148,8 @@ for path, embedding in all_embeddings.items():
     
 flat_embeddings = np.array(flat_embeddings)
 person_ids = np.array(person_ids)
+
+# Eg. (213, 1, 2048) -> (213, 2048)
 flat_embeddings = np.reshape(flat_embeddings, (flat_embeddings.shape[0], flat_embeddings.shape[2]))
 print(f'Flat embedding shape {flat_embeddings.shape}')
 print(f'Person Ids {person_ids.shape}')
